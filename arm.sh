@@ -1,5 +1,3 @@
-#!/bin/bash
-
 cat << 'EOF' > /etc/needrestart/conf.d/99_restart.conf
 $nrconf{kernelhints} = '0';
 $nrconf{restart} = 'a';
@@ -29,5 +27,7 @@ sudo apt install language-pack-ja -y
 sudo update-locale LANG=ja_JP.UTF-8
 sudo ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
+
+rm setup.sh
 
 sudo reboot
