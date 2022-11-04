@@ -30,6 +30,11 @@ update-locale LANG=ja_JP.UTF-8
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+rm awscliv2.zip
+
 rm setup.sh
 
 reboot
