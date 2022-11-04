@@ -23,7 +23,7 @@ apt update
 // docker をインストール
 apt install -y docker-ce
 
-apt -y install python3-pip unzip
+apt -y install python3-pip unzip jq
 
 apt install language-pack-ja -y
 update-locale LANG=ja_JP.UTF-8
